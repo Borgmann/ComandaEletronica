@@ -1,0 +1,57 @@
+﻿@model ComandaEletronica.Models.Pedido
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Pedido</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Cliente.Telefone)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Cliente.Telefone)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Comanda.Id)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Comanda.Id)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Atendente.Nome)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Atendente.Nome)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Mesa.Numero)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Mesa.Numero)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Pago)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Pago)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Valor)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Valor)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

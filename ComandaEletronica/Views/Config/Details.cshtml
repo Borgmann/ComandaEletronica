@@ -1,0 +1,43 @@
+﻿@model ComandaEletronica.Models.Config
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Config</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Perc_Desconto)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Perc_Desconto)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Desconto)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Desconto)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Perc_Acrescimo)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Perc_Acrescimo)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Acrescimo)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Acrescimo)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

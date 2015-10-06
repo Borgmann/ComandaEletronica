@@ -1,0 +1,36 @@
+﻿@model ComandaEletronica.Models.PedidoItem
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>PedidoItem</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Pedido.Id)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Pedido.Id)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Produto.Nome)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Produto.Nome)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Valor)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Valor)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

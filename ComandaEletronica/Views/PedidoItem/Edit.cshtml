@@ -1,0 +1,54 @@
+﻿@model ComandaEletronica.Models.PedidoItem
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>PedidoItem</legend>
+
+        @Html.HiddenFor(model => model.Id)
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Id_Pedido, "Pedido")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("Id_Pedido", String.Empty)
+            @Html.ValidationMessageFor(model => model.Id_Pedido)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Id_Produto, "Produto")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("Id_Produto", String.Empty)
+            @Html.ValidationMessageFor(model => model.Id_Produto)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Valor)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Valor)
+            @Html.ValidationMessageFor(model => model.Valor)
+        </div>
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
